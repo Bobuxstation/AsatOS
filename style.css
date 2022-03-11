@@ -73,10 +73,11 @@ body {
     overflow: hidden;
     width: 100%;
     background-color: #3f3f3f;
-    height: 25px;
+    height: 20px;
     margin: 0;
     padding: 5px;
     background: rgb(31,31,31);
+    background: linear-gradient(180deg, rgba(31,31,31,1) 0%, rgba(63,63,63,1) 100%);
   }
   .window {
       height: 0px;
@@ -180,7 +181,7 @@ body {
       margin-left: 15px;
       font-size: 15px;
       font-family: Inter;
-      height: 20px;
+      height: 25px;
       color: white;
   }
 .OptionButton {
