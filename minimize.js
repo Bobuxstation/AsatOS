@@ -101,6 +101,13 @@ function minimizedstore() {
     document.getElementById("minimizedstore").style.display = "none";
   }
 }
+function minimizedgtk() {
+  if (document.getElementById("minimizedgtk").style.display === "none") {
+    document.getElementById("minimizedgtk").style.display = "block";
+  } else {
+    document.getElementById("minimizedgtk").style.display = "none";
+  }
+}
 
 //settings
 
@@ -111,6 +118,17 @@ function minimize7() {
     document.getElementById("minimizedsettings").style.display = "none";
   } else {
     minimizedsettings()
+    x.style.display = "none";
+  }
+}
+
+function minimize8() {
+  var x = document.getElementById("window7");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    document.getElementById("minimizedgtk").style.display = "none";
+  } else {
+    minimizedgtk()
     x.style.display = "none";
   }
 }

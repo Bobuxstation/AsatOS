@@ -60,3 +60,21 @@ function Closetestwindow6() {
     x.style.display = "none";
   }
 }
+function Closetestwindow7() {
+  var x = document.getElementById("window7");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    document.getElementById("minimizedgtk").style.display = "none";
+  } else {
+    x.style.display = "none";
+  }
+}
+function ToggleMenu() {
+  var x = document.getElementById('appMenu');
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  }
+  else {
+    x.style.display = "none";
+  }
+}
