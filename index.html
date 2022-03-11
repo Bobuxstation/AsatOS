@@ -1,0 +1,152 @@
+<html>
+<head><title>AsatOS - HTML Preview</title>
+<!--Scripts-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="close.js"></script>
+<script type="text/javascript" src="minimize.js"></script>
+<script type="text/javascript" src="Settings.js"></script>
+<link rel="stylesheet" href="style.css" id="style">
+</head>
+<body id="body">
+
+
+<!--Footer-->
+
+<Header>
+
+<p style="color: white; float: left; cursor: default; user-select: none;" onclick="ToggleMenu()">Activities</p>&nbsp;
+
+<li><button onclick="minimize()" class="menubuttonminimized" id="minimizedfiles">&nbsp;Files&nbsp;</button></li>&nbsp;
+<li><button onclick="minimize2()" class="menubuttonminimized" id="minimizedmeme">&nbsp;Meme Maker&nbsp;</button></li>&nbsp;
+<li><button onclick="minimize3()" class="menubuttonminimized" id="minimizednotes">&nbsp;Notes&nbsp;</button></li>&nbsp;
+<li><button onclick="minimize4()" class="menubuttonminimized" id="minimizedmedia">&nbsp;Media&nbsp;</button></li>&nbsp;
+<li><button onclick="minimize5()" class="menubuttonminimized" id="minimizedstore">&nbsp;Store&nbsp;</button></li>&nbsp;
+<li><button onclick="minimize7()" class="menubuttonminimized" id="minimizedsettings">&nbsp;Settings&nbsp;</button></li>&nbsp;
+<li><button onclick="minimize8()" class="menubuttonminimized" id="minimizedgtk">&nbsp;GTK Playground&nbsp;</button></li>&nbsp;
+</ul></nav>
+
+<p style="color: white; text-align: right; float: right; margin-right: 15px;" id="span">TIME</p>
+
+
+
+</Header>
+<div class="sidebar2" id="Sidebar">
+<button onclick="Closetestwindow2()" class="menubutton2"><img src="Icons/mememaker.png" style="height: 35px; width: 35px; padding: 4px;"></img></button><br>
+<button onclick="Closetestwindow3()" class="menubutton2"><img src="Icons/notes.png" style="height: 35px; width: 35px; padding: 4px;"></img></button><br>
+<button onclick="Closetestwindow()" class="menubutton2"><img src="Icons/filesicon.png" style="height: 35px; width: 35px; padding: 4px;"></img></button><br>
+<button onclick="Closetestwindow4()" class="menubutton2"><img src="Icons/media.png" style="height: 35px; width: 35px; padding: 4px;"></img></button><br>
+<button onclick="Closetestwindow5()" class="menubutton2"><img src="Icons/Store.png" style="height: 35px; width: 35px; padding: 4px;"></img></button><br>
+<button onclick="Closetestwindow7()" class="menubutton2"><img src="Icons/gtkplayground.png" style="height: 35px; width: 35px; padding: 4px;"></img></button><br>
+<button onclick="ToggleMenu()" class="OptionButton"><img src="Icons/option.png"style="height: 35px; width: 35px; padding: 4px;"></img></button></div>
+<!-- Application menu, make it similar to GNOME 3 -->
+<div class="appMenu" id="appMenu">
+    <div class="appMenuLauncher" onclick="Closetestwindow3(); ToggleMenu()"><button class="appMenuGTK"><img src="Icons/notes.png" style="height: 70px; width: 70px; padding: 4px;"></img></button><br> Notes </div>
+    <div class="appMenuLauncher" onclick="Closetestwindow2(); ToggleMenu()"><button class="appMenuGTK"><img src="Icons/mememaker.png" style="height: 70px; width: 70px; padding: 4px;"></img></button><br> Meme Maker </div>
+    <div class="appMenuLauncher" onclick="Closetestwindow(); ToggleMenu()"><button class="appMenuGTK"><img src="Icons/filesicon.png" style="height: 70px; width: 70px; padding: 4px;"></img></button><br> Files </div>
+    <div class="appMenuLauncher" onclick="Closetestwindow4(); ToggleMenu()"><button class="appMenuGTK"><img src="Icons/media.png" style="height: 70px; width: 70px; padding: 4px;"></img></button><br> Media </div>
+    <div class="appMenuLauncher" onclick="Closetestwindow5(); ToggleMenu()"><button class="appMenuGTK"><img src="Icons/Store.png" style="height: 70px; width: 70px; padding: 4px;"></img></button><br> Store </div>
+</div>
+
+
+
+
+<!--Window-->
+
+<section style="height: 615px; ">
+
+<div class="window" id="window">
+ <div class="header"><button class="headertext"> Files Beta</button><button onclick="Closetestwindow()" class="closebutton"><i class="material-icons">close</i></button><button onclick="minimize()" class="minimize"><i class="material-icons">minimize</i></button></div>
+ <div class="content"><iframe src="" id="file" width="600" height="450" style="border: black solid 0px; background-color: white;"></iframe></div></div>
+
+
+<div class="window" id="window2">
+<div class="header"><button class="headertext"> Meme Maker</button><button onclick="Closetestwindow2()" class="closebutton"><i class="material-icons">close</i></button><button onclick="minimize2()" class="minimize"><i class="material-icons">minimize</i></button></div>
+<div class="content"><iframe src="" id="mememaker" width="600" height="450" style="border: black solid 0px;"></iframe></div></div>
+
+
+<div class="window" id="window3">
+<div class="header"><button class="headertext" onclick="saveTXT()"> Notes</button><button onclick="Closetestwindow3()" class="closebutton"><i class="material-icons">close</i></button><button onclick="minimize3()" class="minimize"><i class="material-icons">minimize</i></button></div>
+<div class="content"><textarea id="msg" style="border: black solid 0px; width: 600; height: 450; resize: none; opacity: .95;"></textarea></div></div>
+
+
+<div class="window" id="window4">
+<div class="header"><button class="headertext"> Media</button><button onclick="Closetestwindow4()" class="closebutton"><i class="material-icons">close</i></button><button onclick="minimize4()" class="minimize"><i class="material-icons">minimize</i></button></div>
+<div class="content"><iframe src="" id="media" style="border: black solid 0px; width: 600; height: 450; resize: none;"></iframe></div></div>
+
+
+<div class="window" id="window5">
+<div class="header"><button class="headertext"> Store</button><button onclick="Closetestwindow5()" class="closebutton"><i class="material-icons">close</i></button><button onclick="minimize5()" class="minimize"><i class="material-icons">minimize</i></button></div>
+<div class="content"><iframe src="" id="store" width="600" height="450" style="border: black solid 0px; background-color: white;"></iframe>
+</div></div>
+
+<div class="window" id="window7">
+    <div class="header"><button class="headertext"> GTK Playground</button><button onclick="Closetestwindow7()" class="closebutton"><i class="material-icons">close</i></button><button onclick="minimize8()" class="minimize"><i class="material-icons">minimize</i></button></div>
+    <div class="content" style="background-color: #3e3e3e;">
+        <button class="gtkButton">Hello World!</button>
+        <select class="gtkSelect">
+            <option>Please select a game</option>
+            <option>Memeforest</option>
+            <option>Five Nights at Sunat</option>
+            <option>Otnafriends</option>
+            <option>Gugol</option>
+            <option>YouSul</option>
+        </select>
+        <progress min="1" max="100" id="myBar" onclick="move()"></progress>
+        <p>To see the progress bar in action, click on it!</p>
+        <br>
+        <p>More playing components WIP</p>
+        <p>Best regards. zeankun.dev</p>
+</div></div>
+
+<div class="window" id="window6">
+<div class="header" id="header"><button class="headertext"> Settings</button><button onclick="Closetestwindow6()" class="closebutton"><i class="material-icons">close</i></button><button onclick="minimize7()" class="minimize"><i class="material-icons">minimize</i></button></div>
+<div class="content" style="width: 600px;">
+    <div class="settingssidebar" style="background-color: #3f3f3f; opacity: .65; width: 105.30px; float: left; height: 450px; color: white;">
+        <br><H4>🔐 Security</H4>
+        <br><H4 style="background-color: white; color: black;">🎨 Themes</H4>
+        <br><H4>🕒 Time</H4>
+        <br><h4>❓ About</h4>
+        <br><h4>⚠️ Beta</h4>
+    </div>
+    <div class="Settings" style="background-color: #3e3e3e; float: right; width: 484.7px; height: 440px; padding: 5px; color: white;"><h3>Backgrounds</h3><br>
+<button onclick="bg1()">Normal</button><br><br>
+<button onclick="bg2()">City With Water</button><br><br>
+<button onclick="bg3()">Flowers</button><br><br>
+<button onclick="bg4()">Boardwalk</button><br><br>
+<input type="file" accept="image/*" onchange="custom_bg(event)"><br><br>
+    <h3>Color Scheme</h3><br>
+<button onclick="color1()">Reset Color</button><br><br>
+<input type="color" id="color" style="height: 21px;"> <button onclick="getcolor()">Set</button><br><br>
+<input id="cssimport" placeholder="Import WebDE/CSS"></input><button onclick="cssimport()">Import</button>
+</div>
+
+
+
+
+
+
+</section>
+
+
+
+<script>
+$( ".window" ).draggable({ handle: ".header" });
+var width = 0;
+document.getElementById("minimizedfiles").style.display = "none";
+document.getElementById("minimizedmeme").style.display = "none";
+document.getElementById("minimizednotes").style.display = "none";
+document.getElementById("minimizedmedia").style.display = "none";
+document.getElementById("minimizedstore").style.display = "none";
+document.getElementById("minimizedsettings").style.display = "none";
+function move() {
+    var elem = document.getElementById("myBar"); 
+    width = width + 10;
+    elem.value = width;
+}
+</script>
+<script type="text/javascript" src="note.js"></script>
+<script type="text/javascript" src="time.js"></script>
+</body>
+</html>
