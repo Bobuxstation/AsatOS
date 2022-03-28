@@ -90,6 +90,7 @@ body {
      background-color: #3e3e3e;
      cursor: move;
      border: black solid 0.5px;
+     overflow: auto;
   }
   .content {
      width: 600px;
