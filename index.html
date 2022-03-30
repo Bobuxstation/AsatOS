@@ -58,7 +58,41 @@
 
 <div class="window" id="window">
  <div class="header"><button class="headertext"> System Upgrade</button><button onclick="Closetestwindow()" class="closebutton"><i class="material-icons">close</i></button><button onclick="minimize()" class="minimize"><i class="material-icons">minimize</i></button></div>
- <div class="content"><iframe src="" id="file" width="600" height="450" style="border: black solid 0px; background-color: white;"></iframe></div></div>
+ <div class="content" style="overflow: auto;">
+    <fieldset style="border-radius: 5px; font-family: arial;">
+        <legend>AsatOS Html Has Been Discontiuned!</legend>
+        <p>System is required to upgrade to another OS!</p>
+    </fieldset>
+    <fieldset style="border-radius: 5px; font-family: arial;">
+        <legend>System Upgrade</legend>
+        <button onclick="kaos12()">KaOS 12</button><br><br>
+        <button onclick="kaos13()">KaOS 13</button><br><br>
+        <button onclick="kaosterminal()">KaOS Terminal</button><br><br>
+        <button onclick="asatos()">AsatOS Scratch Edition</button>
+    </fieldset>
+    <fieldset style="border-radius: 5px; font-family: arial;">
+        <legend>Advanced System Upgrade</legend>
+        <input id="input"><button onclick="custom()">Load</button>
+    </fieldset>
+    <script>
+    function kaos12(){
+    window.location.replace("https://zeankundev.github.io/KaOS/setup/");
+    }
+    function kaos13(){
+    window.location.replace("https://zeankundev.github.io/KaOS-13/setup/");
+    }
+    function kaosterminal(){
+    window.location.replace("https://zeankundev.github.io/KaOS-13/terminal.html");
+    }
+    function asatos(){
+    window.location.replace("https://scratch.mit.edu/projects/601945605/fullscreen/");
+    }
+    function custom(){
+    os = document.getElementById("input").value;
+    window.location.replace(os);
+    }
+    </script>
+</div></div>
 
 
 <div class="window" id="window2">
