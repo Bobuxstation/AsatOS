@@ -3,7 +3,7 @@ function Closetestwindow() {
   if (x.style.display === "none") {
     document.getElementById("minimizedfiles").style.display = "none";
     x.style.display = "block";
-    var files = document.getElementById("file"); files.src = ("medias/");
+    var files = document.getElementById("file"); files.src = ("upgrade.html");
   } else {
     x.style.display = "none";
     var files = document.getElementById("file"); files.src = ("");
