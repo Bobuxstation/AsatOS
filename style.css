@@ -98,6 +98,7 @@ body {
      padding: 0;
      height: 450px;
      border: black solid 0.5px;
+     background-color: white;
   }
   .headertext {
       color: white;
