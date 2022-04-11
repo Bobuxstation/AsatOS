@@ -70,7 +70,7 @@ function Closetestwindow7() {
 function ToggleMenu() {
   var x = document.getElementById('appMenu');
   if (x.style.display === "none") {
-    x.style.display = "block";
+    x.style.display = "flex";
   }
   else {
     x.style.display = "none";
