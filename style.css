@@ -4,6 +4,7 @@
     font-style: normal;
     src: url('Icons/MaterialIcons-Regular.ttf');
 }
+
 /* FONT DECLARATION */
 .material-icons {
     font-family: 'material-icons';
@@ -19,6 +20,7 @@
     direction: ltr;
     -webkit-font-smoothing: antialiased;
 }
+
 /* gtk components style */
 .gtkButton {
     border-radius: 5px;
@@ -38,6 +40,7 @@
     outline: none;
     border: 1px solid #fff;
 }
+
 .appMenu {
     display: inline-block;
     padding: 35px;
@@ -49,6 +52,7 @@
     padding-left: 100px;
     backdrop-filter: blur(9px);
 }
+
 .appMenuLauncher {
     display: inline-block !important;
     text-align: center;
@@ -58,138 +62,158 @@
     color: white;
     border: 0px black solid;
 }
+
 .appMenuGTK {
     background: none;
     color: white;
     border: 0px black solid;
 }
+
 body {
     font-family: Inter !important;
     background-image: url("bg.jpg");
     background-size: cover;
     overflow: hidden;
-  }
-  Header {
+}
+
+Header {
     overflow: hidden;
     width: 100%;
     background-color: #3f3f3f;
     height: 20px;
     margin: 0;
     padding: 5px;
-    background: rgb(31,31,31);
-    background: linear-gradient(180deg, rgba(31,31,31,1) 0%, rgba(63,63,63,1) 100%);
-  }
-  .window {
-      height: 0px;
-      width: 0px;
-      display: none;
-  }
-  .header {
-     width: 595px;
-     height: 30px;
-     background-color: #3e3e3e;
-     cursor: move;
-     border-radius: 10px 10px 0px 0px;
-     overflow: auto;
-     padding-right: 5px;
-  }
-  .content {
-     width: 600px;
-     margin: 0;
-     padding: 0;
-     height: 450px;
-  }
-  .headertext {
-      color: white;
-      background-color: #3e3e3e;
-      border: black solid 0px;
-      font-family: Inter;
-      font-size: 15px;
-      height: 30px;
-      padding-left: 5px;
-  }
-  .closebutton {
-      float: right;
-      background: none;
-      height: 100%;
-      width: 25px;
-      border: black solid 0px;
-      font-size: 15px;
-      color: white;
-  }
-  .closebutton i:hover{
-      background-color: red;
-      border: black solid 0px;
-      color: black;
-  }
-  .closebutton i {
+    background: rgb(31, 31, 31);
+    background: linear-gradient(180deg, rgba(31, 31, 31, 1) 0%, rgba(63, 63, 63, 1) 100%);
+}
+
+.window {
+    height: 0px;
+    width: 0px;
+    display: none;
+}
+
+.header {
+    width: 595px;
+    height: 30px;
+    background-color: #3e3e3e;
+    cursor: move;
+    border-radius: 10px 10px 0px 0px;
+    overflow: auto;
+    padding-right: 5px;
+}
+
+.content {
+    width: 600px;
+    margin: 0;
+    padding: 0;
+    height: 450px;
+}
+
+.headertext {
+    color: white;
+    background-color: #3e3e3e;
+    border: black solid 0px;
+    font-family: Inter;
+    font-size: 15px;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.closebutton {
+    float: right;
+    background: none;
+    height: 100%;
+    width: 25px;
+    border: black solid 0px;
+    font-size: 15px;
+    color: white;
+}
+
+.closebutton i:hover {
+    background-color: red;
+    border: black solid 0px;
+    color: black;
+}
+
+.closebutton i {
     background-color: #0084ff;
     border-radius: 150px;
     color: black;
-  }
-  li {
-      float: left;
-      display: block;
-  }
-  *{
-      margin: 0;
-      padding: 0;
-  }
-  
-  nav{
-  display: inline-block;
-  }
-  .sidebar2 {
-      backdrop-filter: blur(9px);
-      height: 100%;
-      width:50px;
-      position:fixed!important;
-      z-index:1;
-      overflow:auto;
-      padding: 2.5px;
-      background-color: #3f3f3f99;
-      display: flex;
-      flex-direction: column;
-  }
-  .menubutton2 {
-      background: none;
-      border: black solid 0px;
-      font-family: Inter;
-      color: black;
-      float: left;
-      text-align: left;
-      font-size: 15px
-  }
-  .list {
-      width: 60%;
-      margin: auto;
-  }
-    .minimize {
-      float: right;
-      background-color: #3e3e3e;
-      height: 100%;
-      width: 25px;
-      border: black solid 0px;
-      font-size: 20px;
-      color: white;
-  }
-  .minimize:hover{
-      background-color: red;
-      border: black solid 0px;
-  
-  }
-    .menubuttonminimized {
-      background-color: #1d1d1d;
-      border: black solid 0px;
-      color: black;
-      float: left;
-      display: none;
-      margin-left: 15px;
-      font-size: 15px;
-      font-family: Inter;
-      height: 25px;
-      color: white;
-  }
+}
+
+li {
+    float: left;
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: inline-block;
+}
+
+.sidebar2 {
+    backdrop-filter: blur(9px);
+    height: 100%;
+    width: 50px;
+    position: fixed !important;
+    z-index: 1;
+    overflow: auto;
+    padding: 2.5px;
+    background-color: #3f3f3f99;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.menubutton2 {
+    background: none;
+    border: black solid 0px;
+    font-family: Inter;
+    color: black;
+    float: left;
+    text-align: left;
+    font-size: 15px
+}
+
+.list {
+    width: 60%;
+    margin: auto;
+}
+
+.minimize {
+    float: right;
+    background-color: #3e3e3e;
+    height: 100%;
+    width: 25px;
+    border: black solid 0px;
+    font-size: 20px;
+    color: white;
+}
+
+.minimize:hover {
+    background-color: red;
+    border: black solid 0px;
+
+}
+
+.menubuttonminimized {
+    background-color: #1d1d1d;
+    border: black solid 0px;
+    color: black;
+    float: left;
+    display: none;
+    margin-left: 15px;
+    font-size: 15px;
+    font-family: Inter;
+    height: 25px;
+    color: white;
+}
+
 .OptionButton {
     overflow: hidden;
     position: fixed;
@@ -197,27 +221,31 @@ body {
     background: none;
     border: black solid 0px;
     color: black;
-    float: left;
+    margin-bottom: 33px;
 }
+
 textarea {
-  font-size: 20px;
-  font-family: arial;
-  padding: 5px;
+    font-size: 20px;
+    font-family: arial;
+    padding: 5px;
 }
+
 header i {
-  padding-top: 2px;
+    padding-top: 2px;
 }
+
 #widget {
-  border-radius: 5px;
-  background: #3f3f3f99;
-  margin: auto;
-  select: none;
-  margin-top: 10px;
-  cursor: move;
-  color: white;
-  backdrop-filter: blur(9px);
-  border: white solid 1px;
+    border-radius: 5px;
+    background: #3f3f3f99;
+    margin: auto;
+    select: none;
+    margin-top: 10px;
+    cursor: move;
+    color: white;
+    backdrop-filter: blur(9px);
+    border: white solid 1px;
 }
+
 textarea {
-  backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
 }
