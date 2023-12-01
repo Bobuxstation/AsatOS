@@ -47,7 +47,7 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(9px);
+    backdrop-filter: blur(25px);
     place-items: center;
     justify-content: center;
     animation-name: slideInUp;
@@ -84,7 +84,7 @@ Header {
     overflow: hidden;
     width: 100%;
     background-color: #3f3f3f99;
-    backdrop-filter: blur(9px);
+    backdrop-filter: blur(15px);
     height: fit-content;
     margin: 0;
     padding: 8px;
@@ -98,6 +98,8 @@ Header {
     width: fit-content !important;
     display: none;
     position: absolute !important;
+    border: #4d4d4d solid 2px;
+    border-radius: 11px 11px 0px 0px;
     transition: none;
 }
 
@@ -150,6 +152,10 @@ Header {
     padding: 3px;
 }
 
+.Settings, .settingssidebar {
+    box-sizing:content-box;
+}
+
 li {
     float: left;
     display: block;
@@ -167,7 +173,7 @@ nav {
 }
 
 .sidebar2 {
-    backdrop-filter: blur(9px);
+    backdrop-filter: blur(15px);
     height: calc(100vh - 35.2px);
     width: fit-content;
     position: fixed !important;
@@ -186,9 +192,19 @@ nav {
     border: black solid 0px;
     font-family: Inter;
     color: black;
+    cursor: pointer;
     float: left;
     text-align: left;
     font-size: 15px
+}
+
+.menubutton2:hover, .OptionButton:hover {
+    background: #6d6d6d99;
+    border-radius: 5px;
+}
+
+.menubutton2 img, .OptionButton img {
+    padding: 8px !important;
 }
 
 .list {
@@ -219,7 +235,7 @@ nav {
     color: black;
     float: left;
     display: none;
-    margin-left: 5px;
+    margin-left: 10px;
     font-size: 1em;
     font-family: Inter;
     color: white;
@@ -258,7 +274,7 @@ header i {
     margin-top: 50px;
     cursor: move;
     color: white;
-    backdrop-filter: blur(9px);
+    backdrop-filter: blur(15px);
     border: white solid 1px;
 }
 
