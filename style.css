@@ -42,15 +42,19 @@
 }
 
 .appMenu {
-    display: inline-block;
-    padding: 35px;
     background-color: #1d1d1dA6;
     display: none;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding-left: 100px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
     backdrop-filter: blur(9px);
+    place-items: center;
+    justify-content: center;
+    animation-name: slideInUp;
+    animation-duration: 0.25s;
+    z-index: 1;
+    animation-fill-mode: both;
+    top: 0;
 }
 
 .appMenuLauncher {
@@ -79,28 +83,33 @@ body {
 Header {
     overflow: hidden;
     width: 100%;
-    background-color: #3f3f3f;
-    height: 20px;
+    background-color: #3f3f3f99;
+    backdrop-filter: blur(9px);
+    height: fit-content;
     margin: 0;
-    padding: 5px;
-    background: rgb(31, 31, 31);
-    background: linear-gradient(180deg, rgba(31, 31, 31, 1) 0%, rgba(63, 63, 63, 1) 100%);
+    padding: 8px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
 }
 
 .window {
-    height: 0px;
-    width: 0px;
+    height: fit-content !important;
+    width: fit-content !important;
     display: none;
+    position: absolute !important;
+    transition: none;
 }
 
 .header {
-    width: 595px;
-    height: 30px;
+    width: 100%;
+    height: fit-content;
     background-color: #3e3e3e;
     cursor: move;
     border-radius: 10px 10px 0px 0px;
     overflow: auto;
-    padding-right: 5px;
+    padding: 5px;
+    overflow: hidden;
 }
 
 .content {
@@ -123,23 +132,22 @@ Header {
 .closebutton {
     float: right;
     background: none;
-    height: 100%;
-    width: 25px;
+    height: 30px;
     border: black solid 0px;
     font-size: 15px;
     color: white;
+    aspect-ratio: 1/1;
 }
 
 .closebutton i:hover {
-    background-color: red;
+    background-color: #5d5d5d;
     border: black solid 0px;
-    color: black;
 }
 
 .closebutton i {
-    background-color: #0084ff;
+    background-color: #4d4d4d;
     border-radius: 150px;
-    color: black;
+    padding: 3px;
 }
 
 li {
@@ -150,6 +158,8 @@ li {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
 }
 
 nav {
@@ -158,16 +168,17 @@ nav {
 
 .sidebar2 {
     backdrop-filter: blur(9px);
-    height: 100%;
-    width: 50px;
+    height: calc(100vh - 35.2px);
+    width: fit-content;
     position: fixed !important;
-    z-index: 1;
+    z-index: 2;
     overflow: auto;
-    padding: 2.5px;
+    padding: 8px;
     background-color: #3f3f3f99;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    bottom: 0;
 }
 
 .menubutton2 {
@@ -188,40 +199,45 @@ nav {
 .minimize {
     float: right;
     background-color: #3e3e3e;
-    height: 100%;
-    width: 25px;
+    height: 30px;
     border: black solid 0px;
     font-size: 20px;
     color: white;
+    border-radius: 150px;
+    aspect-ratio: 1/1;
+    margin-right: 5px;
 }
 
 .minimize:hover {
-    background-color: red;
+    background-color: #4d4d4d;
     border: black solid 0px;
 
 }
 
 .menubuttonminimized {
-    background-color: #1d1d1d;
     border: black solid 0px;
     color: black;
     float: left;
     display: none;
-    margin-left: 15px;
-    font-size: 15px;
+    margin-left: 5px;
+    font-size: 1em;
     font-family: Inter;
-    height: 25px;
     color: white;
+    background: no-repeat;
+    width: fit-content;
+}
+
+.menubuttonminimized:hover {
+    cursor: pointer;
 }
 
 .OptionButton {
     overflow: hidden;
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    bottom: 10;
     background: none;
     border: black solid 0px;
     color: black;
-    margin-bottom: 33px;
 }
 
 textarea {
@@ -239,7 +255,7 @@ header i {
     background: #3f3f3f99;
     margin: auto;
     select: none;
-    margin-top: 10px;
+    margin-top: 50px;
     cursor: move;
     color: white;
     backdrop-filter: blur(9px);
@@ -248,4 +264,26 @@ header i {
 
 textarea {
     backdrop-filter: blur(4px);
+}
+
+header p,
+header li,
+header i {
+    cursor: pointer;
+}
+
+header p {
+    font-weight: bold;
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
