@@ -47,12 +47,12 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(9px);
     place-items: center;
     justify-content: center;
     animation-name: slideInUp;
     animation-duration: 0.25s;
-    z-index: 1;
+    z-index: 2;
     animation-fill-mode: both;
     top: 0;
 }
@@ -84,12 +84,12 @@ Header {
     overflow: hidden;
     width: 100%;
     background-color: #3f3f3f99;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(9px);
     height: fit-content;
     margin: 0;
     padding: 8px;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     top: 0;
 }
 
@@ -98,8 +98,6 @@ Header {
     width: fit-content !important;
     display: none;
     position: absolute !important;
-    border: #4d4d4d solid 2px;
-    border-radius: 11px 11px 0px 0px;
     transition: none;
 }
 
@@ -152,10 +150,6 @@ Header {
     padding: 3px;
 }
 
-.Settings, .settingssidebar {
-    box-sizing:content-box;
-}
-
 li {
     float: left;
     display: block;
@@ -166,6 +160,11 @@ li {
     padding: 0;
     box-sizing: border-box;
     transition: all 0.25s ease;
+    opacity: 1 !important;
+}
+
+.focused {
+    z-index: 1;
 }
 
 nav {
@@ -173,11 +172,11 @@ nav {
 }
 
 .sidebar2 {
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(9px);
     height: calc(100vh - 35.2px);
     width: fit-content;
     position: fixed !important;
-    z-index: 2;
+    z-index: 3;
     overflow: auto;
     padding: 8px;
     background-color: #3f3f3f99;
@@ -192,19 +191,9 @@ nav {
     border: black solid 0px;
     font-family: Inter;
     color: black;
-    cursor: pointer;
     float: left;
     text-align: left;
     font-size: 15px
-}
-
-.menubutton2:hover, .OptionButton:hover {
-    background: #6d6d6d99;
-    border-radius: 5px;
-}
-
-.menubutton2 img, .OptionButton img {
-    padding: 8px !important;
 }
 
 .list {
@@ -235,7 +224,7 @@ nav {
     color: black;
     float: left;
     display: none;
-    margin-left: 10px;
+    margin-left: 5px;
     font-size: 1em;
     font-family: Inter;
     color: white;
@@ -274,7 +263,7 @@ header i {
     margin-top: 50px;
     cursor: move;
     color: white;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(9px);
     border: white solid 1px;
 }
 
