@@ -44,7 +44,7 @@ function Closetestwindow5() {
   var x = document.getElementById("window5");
   if (x.style.display === "none") {
     x.style.display = "block";
-    var store = document.getElementById("store"); store.src = ("https://zeankundev.github.io/KaOS-Store/");
+    var store = document.getElementById("store"); store.src = ("https://bobuxstation.github.io/KaOS-Store/");
     document.getElementById("minimizedstore").style.display = "none";
   } else {
     x.style.display = "none";
