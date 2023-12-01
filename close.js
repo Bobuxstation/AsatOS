@@ -76,3 +76,10 @@ function ToggleMenu() {
     x.style.display = "none";
   }
 }
+Array.prototype.forEach.call((document.getElementsByClassName('window')),function (win) {
+  win.onclick = function () {
+        const windows = document.querySelectorAll('.window');
+        windows.forEach((elem) => elem.classList.remove('focused'));
+        win.classList.add('focused');
+  }
+})
