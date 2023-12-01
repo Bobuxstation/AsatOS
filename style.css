@@ -99,6 +99,9 @@ Header {
     display: none;
     position: absolute !important;
     transition: none;
+    box-shadow: 0px 0px 20px 0px #00000057;
+    border-radius: 10px 10px 0px 0px;
+    border: #4d4d4d solid 1px;
 }
 
 .header {
@@ -224,7 +227,7 @@ nav {
     color: black;
     float: left;
     display: none;
-    margin-left: 5px;
+    margin-left: 10px;
     font-size: 1em;
     font-family: Inter;
     color: white;
