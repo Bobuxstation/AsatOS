@@ -70,16 +70,23 @@ function Closetestwindow7() {
 function ToggleMenu() {
   var x = document.getElementById('appMenu');
   if (x.style.display === "none") {
+    document.getElementById('desktops').innerHTML = ``
+    html2canvas(document.documentElement).then(canvas => {
+      document.getElementById('desktops').appendChild(canvas)
+      canvas.onclick = function () {
+        x.style.display = "none";
+      }
+    });
     x.style.display = "flex";
   }
   else {
     x.style.display = "none";
   }
 }
-Array.prototype.forEach.call((document.getElementsByClassName('window')),function (win) {
+Array.prototype.forEach.call((document.getElementsByClassName('window')), function (win) {
   win.onclick = function () {
-        const windows = document.querySelectorAll('.window');
-        windows.forEach((elem) => elem.classList.remove('focused'));
-        win.classList.add('focused');
+    const windows = document.querySelectorAll('.window');
+    windows.forEach((elem) => elem.classList.remove('focused'));
+    win.classList.add('focused');
   }
 })

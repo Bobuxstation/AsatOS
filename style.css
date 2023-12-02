@@ -48,13 +48,39 @@
     width: 100vw;
     height: 100vh;
     backdrop-filter: blur(9px);
-    place-items: center;
-    justify-content: center;
     animation-name: slideInUp;
     animation-duration: 0.25s;
     z-index: 2;
     animation-fill-mode: both;
     top: 0;
+    place-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    text-align: center;
+}
+
+#desktops {
+    text-align: center;
+    padding: 25px;
+}
+
+.icons {
+    place-items: center;
+    justify-content: center;
+    display: inline-block;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+}
+
+.appMenuLauncher:first-child {
+    margin: 0;
+}
+
+canvas {
+    width: calc(100vw / 4) !important;
+    height: calc(100vh / 4) !important;
+    border-radius: 5px;
 }
 
 .appMenuLauncher {
@@ -71,6 +97,7 @@
     background: none;
     color: white;
     border: 0px black solid;
+    color: #8d8d8d;
 }
 
 #span {
@@ -179,6 +206,7 @@ li {
     box-sizing: border-box;
     transition: all 0.25s ease;
     opacity: 1 !important;
+    outline: none;
 }
 
 .focused {
@@ -279,6 +307,16 @@ textarea {
     padding: 5px;
 }
 
+#searchbar {
+    padding: 10px;
+    border-radius: 150px;
+    border: #4d4d4d solid 1px;
+    background: #3d3d3d;
+    width: 20vw;
+    font-size: 12px;
+    color: white;
+}
+
 .Settings {
     box-sizing: content-box !important;
 }
@@ -327,6 +365,10 @@ textarea, iframe {
     transition: none;
     min-width: 600px;
     min-height: 450px;
+}
+
+iframe {
+    background: #2d2d2d;
 }
 
 .minimize i {
