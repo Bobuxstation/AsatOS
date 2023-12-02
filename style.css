@@ -78,7 +78,6 @@
     position: absolute;
     text-align: center !important;
     pointer-events: none;
-    font-weight: normal;
 }
 
 body {
@@ -136,16 +135,17 @@ Header {
     background-color: #3e3e3e;
     border: black solid 0px;
     font-family: Inter;
-    font-size: 15px;
-    height: 31.6px;
+    font-size: 12px;
+    height: 15px;
     padding-left: 5px;
+    padding: 5px;
     cursor: pointer;
 }
 
 .closebutton {
     float: right;
     background: none;
-    height: 30px;
+    height: 25px;
     border: black solid 0px;
     font-size: 15px;
     color: white;
@@ -162,6 +162,7 @@ Header {
     background-color: #4d4d4d;
     border-radius: 150px;
     padding: 3px;
+    font-size: 12px;
 }
 
 li {
@@ -222,16 +223,22 @@ nav {
 .minimize {
     float: right;
     background-color: #3e3e3e;
-    height: 31.6px;
+    height: 25px;
     border: #00000000 solid 1px;
     font-size: 20px;
     color: white;
+    aspect-ratio: 1/1;
+}
+
+.minimize i {
     border-radius: 150px;
     aspect-ratio: 1/1;
     margin-right: 5px;
+    padding: 3px;
+    border: #5d5d5d00 solid 1px;
 }
 
-.minimize:hover {
+.minimize i:hover {
     background-color: #4d4d4d;
     border: black solid 0px;
     border: #5d5d5d solid 1px;
@@ -300,10 +307,6 @@ header i {
     cursor: pointer;
 }
 
-header p {
-    font-weight: bold;
-}
-
 @keyframes slideInUp {
     0% {
         transform: translateX(-100%);
@@ -321,4 +324,8 @@ textarea, iframe {
     transition: none;
     min-width: 600px;
     min-height: 450px;
+}
+
+.minimize i {
+    font-size: 12px;
 }
