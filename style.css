@@ -137,7 +137,7 @@ Header {
     border: black solid 0px;
     font-family: Inter;
     font-size: 15px;
-    height: 30px;
+    height: 31.6px;
     padding-left: 5px;
     pointer-events: none;
 }
@@ -267,6 +267,10 @@ textarea {
     font-size: 20px;
     font-family: arial;
     padding: 5px;
+}
+
+.Settings {
+    box-sizing: content-box !important;
 }
 
 header i {
