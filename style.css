@@ -125,10 +125,10 @@ Header {
 }
 
 .content {
-    width: 600px;
+    min-width: 600px;
     margin: 0;
     padding: 0;
-    height: 450px;
+    min-height: 450px;
 }
 
 .headertext {
@@ -139,7 +139,7 @@ Header {
     font-size: 15px;
     height: 31.6px;
     padding-left: 5px;
-    pointer-events: none;
+    cursor: pointer;
 }
 
 .closebutton {
@@ -314,4 +314,11 @@ header p {
         transform: translateX(0);
         opacity: 1;
     }
+}
+
+textarea, iframe {
+    resize: both !important;
+    transition: none;
+    min-width: 600px;
+    min-height: 450px;
 }
