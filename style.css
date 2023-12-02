@@ -132,14 +132,17 @@ Header {
 
 .headertext {
     color: white;
-    background-color: #3e3e3e;
+    background: none;
     border: black solid 0px;
     font-family: Inter;
     font-size: 12px;
-    height: 15px;
-    padding-left: 5px;
+    height: fit-content;
     padding: 5px;
     cursor: pointer;
+    width: calc(100% - 10px);
+    position: absolute;
+    box-sizing: border-box;
+    pointer-events: none;
 }
 
 .closebutton {
