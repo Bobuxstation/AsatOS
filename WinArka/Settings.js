@@ -21,14 +21,6 @@ function custom_bg(event) {
 }
 
 //Color scheme
-
-function color1() {
-  document.getElementById("header").style.backgroundColor = "#75cbed";
-}
-function getcolor() {
-  a = document.getElementById("color").value;
-  document.getElementById("header").style.backgroundColor = a;
-}
 function cssimport() {
   b = document.getElementById("cssimport").value;
   document.getElementById("style").href = b;
